@@ -6,13 +6,10 @@ char text[30];
 char temp[10];
 
 /**
-  * @brief   组HTTP POST报文
+  * @brief   组HTTP GET报文
   * @param   pkt   报文缓存指针
-  * @param   key   API_KEY定义在Main.c文件中，需要根据自己的设备修改
-  *	@param 	 devid 设备ID，定义在main.c文件中，需要根据自己的设备修改
-  *	@param 	 dsid  数据流ID
-  *	@param 	 val   字符串形式的数据点的值
-  * @retval  整个包的长度
+  * @param   key   key唯一识别码
+  * @param   data  数据
   */
 uint32_t HTTP_GetPkt(char *pkt, const char *key, int data)
 {
