@@ -19,7 +19,7 @@ Section Cross References
     main.o(.text) refers to srf05.o(.text) for SRF05_Init
     main.o(.text) refers to esp8266.o(.text) for ESP8266_Init
     main.o(.text) refers to printf3.o(i.__0printf$3) for __2printf
-    main.o(.text) refers to http_demo.o(.text) for HTTP_PostPkt
+    main.o(.text) refers to http_demo.o(.text) for HTTP_GetPkt
     main.o(.text) refers to adc.o(.data) for adcConvertedValue
     main.o(.text) refers to usart2.o(.bss) for usart2_rcv_buf
     stm32f10x_it.o(.text) refers to usart2.o(.data) for usart2_rcv_len
@@ -830,7 +830,7 @@ Image Symbol Table
     TIM_ClearFlag                            0x08002635   Thumb Code     6  stm32f10x_tim.o(.text)
     TIM_GetITStatus                          0x0800263b   Thumb Code    34  stm32f10x_tim.o(.text)
     TIM_ClearITPendingBit                    0x0800265d   Thumb Code     6  stm32f10x_tim.o(.text)
-    HTTP_PostPkt                             0x08002665   Thumb Code   144  http_demo.o(.text)
+    HTTP_GetPkt                              0x08002665   Thumb Code   144  http_demo.o(.text)
     ESP8266_Init                             0x08002799   Thumb Code   104  esp8266.o(.text)
     USART1_Config                            0x080028ad   Thumb Code   152  usart1.o(.text)
     usart1_write                             0x08002945   Thumb Code    50  usart1.o(.text)
@@ -985,7 +985,7 @@ Image component sizes
          0          0          0          0          0       4244   core_cm3.o
        236         10          0          4          0       1276   delay.o
        276        172          0          0          0        419   esp8266.o
-       308        164          0          0         40       1103   http_demo.o
+       308        164          0          0         40       1102   http_demo.o
        560        114          0          0          0       2167   main.o
        220         20          0          0          0       1761   misc.o
        200          4          0          0          0        640   srf05.o
@@ -1003,7 +1003,7 @@ Image component sizes
        388         44          8          8       1024       2522   usart2.o
 
     ----------------------------------------------------------------------
-     11574        856        346         56       2092     348519   Object Totals
+     11574        856        346         56       2092     348518   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          2          0          2          0          4          0   (incl. Padding)
 
@@ -1047,8 +1047,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     12390        892        346         60       2092     347311   Grand Totals
-     12390        892        346         60       2092     347311   ELF Image Totals
+     12390        892        346         60       2092     347310   Grand Totals
+     12390        892        346         60       2092     347310   ELF Image Totals
      12390        892        346         60          0          0   ROM Totals
 
 ==============================================================================

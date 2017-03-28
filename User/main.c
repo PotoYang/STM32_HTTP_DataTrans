@@ -14,7 +14,7 @@
 
 #define KEY "cd0101"
 
-uint32_t HTTP_PostPkt(char *pkt, const char *key, int data);
+uint32_t HTTP_GetPkt(char *pkt, const char *key, int data);
 int main(void)
 {
   char HTTP_Buf[100];     //HTTP报文缓存区
@@ -108,7 +108,7 @@ int main(void)
 		  data = person_num;
 			
       USART2_Clear();
-      len = HTTP_PostPkt(HTTP_Buf, KEY, data); //HTTP组包
+      len = HTTP_GetPkt(HTTP_Buf, KEY, data); //HTTP组包
       USART2_Write(USART2, (unsigned char *)(HTTP_Buf), len);			//报文发送
       printf("send HTTP msg:\r\n%s\r\n", HTTP_Buf);
         

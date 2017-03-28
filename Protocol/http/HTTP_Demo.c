@@ -14,7 +14,7 @@ char temp[10];
   *	@param 	 val   字符串形式的数据点的值
   * @retval  整个包的长度
   */
-uint32_t HTTP_PostPkt(char *pkt, const char *key, int data)
+uint32_t HTTP_GetPkt(char *pkt, const char *key, int data)
 {
   *pkt = 0;
 	memset(temp, 0, 10);
