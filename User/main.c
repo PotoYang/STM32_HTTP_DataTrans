@@ -54,17 +54,30 @@ int main(void)
 			data = 0;
 			memset(count, 0, sizeof(count));
 			
-	  	for(i = 0; i < 500; i++)            
+	  	array[0] = 0;
+			
+	  	for(i = 1; i < 500; i++)            
       {
 	      temp = adcConvertedValue;
-				
-				if((temp/10 -90) < 0)
+	    	
+	    	if((temp / 10 - 94) < 0)
 					array[i] = 0;
 				else
-					array[i] = temp / 10 - 90;				
+					array[i] = temp / 10 - 94;
+	    	
+				//限幅法滤波
+				if((array[i] - array[i - 1]) < 10 && (array[i - 1] - array[i]) < 10)
+				{
+					array[i] = array[i - 1]; 
+        }
+				
+				if(array[i] < 10)
+					array[i] = 0;
+				
 				DelayMs(100);
 	    }
 			
+			//数组压缩
 			for(k = 0; k < 5; k++)
 			{
 				temp = 0;
@@ -87,15 +100,15 @@ int main(void)
 			  {					
 			  	if((count[i - 1] < count[i]) && (count[i + 1] < count[i]))
 			  	{
-						if(count[i] > 30 && count[i] <= 60)
+						if(count[i] > 40 && count[i] <= 90)
 						{
 							person_num = person_num + 1;
 						}
-						else if(count[i] > 60 && count[i] <= 90)
+						else if(count[i] > 90 && count[i] <= 135)
 						{
 							person_num = person_num + 2;
 						}
-						else if(count[i] > 90)
+						else if(count[i] > 135)
 						{
 							person_num = person_num + 3;
 						}

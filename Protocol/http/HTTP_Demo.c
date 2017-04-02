@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
-char text[30];
+char text[100];
 char temp[10];
 
 /**
@@ -15,14 +15,29 @@ uint32_t HTTP_GetPkt(char *pkt, const char *key, int data)
 {
   *pkt = 0;
 	memset(temp, 0, 10);
-	memset(text, 0, 30);
+	memset(text, 0, 100);
 	
 	sprintf(temp,"%d", data);
 
 	strcat(text, "auth_key=");
 	strcat(text, key);
 	strcat(text, "&");
-	strcat(text, "data=");
+	strcat(text, "data1=");
+	strcat(text, temp);
+	strcat(text, "&");
+	strcat(text, "data2=");
+	strcat(text, temp);
+	strcat(text, "&");
+	strcat(text, "data3=");
+	strcat(text, temp);
+	strcat(text, "&");
+	strcat(text, "data4=");
+	strcat(text, temp);
+	strcat(text, "&");
+	strcat(text, "data5=");
+	strcat(text, temp);
+	strcat(text, "&");
+	strcat(text, "data6=");
 	strcat(text, temp);
 	
   strcat(pkt, "GET /Train/getinfo.php?");

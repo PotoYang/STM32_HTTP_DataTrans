@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\object\HttpDemo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\object\HttpDemo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.02 [Build 28]: Last Updated: Tue Mar 28 10:30:23 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.02 [Build 28]: Last Updated: Sun Apr 02 10:48:39 2017
 <BR><P>
 <H3>Maximum Stack Usage =        900 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -298,7 +298,7 @@ Global Symbols
 <P><STRONG><a name="[a]"></a>WWDG_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 446 bytes, Stack size 800 bytes, main.o(.text))
+<P><STRONG><a name="[46]"></a>main</STRONG> (Thumb, 504 bytes, Stack size 800 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 900<LI>Call Chain = main &rArr; USART2_Config &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART2_Write
@@ -966,7 +966,7 @@ Global Symbols
 
 <P><STRONG><a name="[155]"></a>TIM_ClearITPendingBit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[5b]"></a>HTTP_GetPkt</STRONG> (Thumb, 144 bytes, Stack size 16 bytes, http_demo.o(.text))
+<P><STRONG><a name="[5b]"></a>HTTP_GetPkt</STRONG> (Thumb, 264 bytes, Stack size 16 bytes, http_demo.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = HTTP_GetPkt &rArr; __2sprintf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
